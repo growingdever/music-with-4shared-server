@@ -5,6 +5,7 @@ var ERROR_UNKNOWN = 0;
 var ERROR_NOT_EXIST_MUSIC = 1;
 
 exports.vote = function(req, res) {
+  console.log(req.body.hash);
   async.waterfall([
     function(callback) { // add vote to db
       db.Vote
